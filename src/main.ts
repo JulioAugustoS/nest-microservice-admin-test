@@ -12,6 +12,7 @@ async function bootstrap() {
       urls: [
         `amqp://${process.env.RABBIT_MQ_USER}:${process.env.RABBIT_MQ_PASS}@${process.env.RABBIT_MQ_IP}:${process.env.RABBIT_MQ_PORT}/smartranking`,
       ],
+      noAck: false,
       queue: 'admin-backend',
     },
   });
